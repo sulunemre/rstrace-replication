@@ -1,0 +1,11 @@
+squareSum: true
+recency: true
+pathLengthLimit: -1 # -1=unlimited
+dataset:
+  type: perceval # perceval, revrec, seoss
+  commitsFilePath: datasets/qt-3ds-gitHistory-2019-12-16.json
+method: rstrace+ # rstrace+, profile-based, revfinder
+neo4j:
+  uri: bolt://localhost:7687
+  user: neo4j
+  password: emre

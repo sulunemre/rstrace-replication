@@ -1,0 +1,33 @@
+version: '3'
+services:
+  graph-db:
+    image: neo4j:3.5.5
+    ports:
+      - "7474:7474"
+      - "7687:7687"
+    environment:
+      - NEO4J_AUTH=neo4j/rstrace
+
+  initial-import-handler:
+    build: ./initial-import-handler
+    depends_on:
+      - graph-db
+
+  github-webhook-handler:
+    build: ./github-webhook-handler
+    depends_on:
+      - recommendation-engine
+    env_file:
+      - github-webhook-handler/.env
+
+  recommendation-engine:
+    build: ./recommendation-engine
+    depends_on:
+      - graph-db
+
+  db-updater:
+    build: ./db-updater
+    depends_on:
+      - graph-db
+
+

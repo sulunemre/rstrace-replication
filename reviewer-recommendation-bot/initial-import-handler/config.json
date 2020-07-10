@@ -1,0 +1,9 @@
+{
+  "DB_ADDRESS": "bolt://graph-db:7687",
+  "DB_USERNAME": "neo4j",
+  "DB_PASSWORD": "rstrace",
+  "GITHUB_REPO_URL": "https://github.com/erdemtuna/METU-EE-STAR-Project",
+  "GITHUB_REPO_OWNER": "erdemtuna",
+  "GITHUB_REPO_NAME": "METU-EE-STAR-Project",
+  "GITHUB_API_TOKEN": "eea99937f06f8ac94a05c1325c6f872ed8112df4"
+}
